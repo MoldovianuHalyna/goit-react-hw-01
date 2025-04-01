@@ -1,8 +1,8 @@
 import FriendListItem from "./FriendListItem";
-
+import styles from "./FriendsList.module.css";
 const FriendList = ({ friendsData }) => {
   return (
-    <ul>
+    <ul className={styles.friendsList}>
       {friendsData.map(({ avatar, name, isOnline, id }) => {
         return (
           <li key={id}>

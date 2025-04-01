@@ -1,24 +1,30 @@
+import { AtSign } from "lucide-react";
+import styles from "./Profile.module.css";
+
 const Profile = ({ name, tag, location, image, stats }) => {
   return (
-    <div>
-      <div>
+    <div className={styles.wrapper}>
+      <div className={styles.imageWrapper}>
         <img src={image} alt="User avatar" />
-        <p>{name}</p>
-        <p>{tag}</p>
+        <p className={styles.nameHeader}>{name}</p>
+        <p className={styles.tag}>
+          <AtSign />
+          {tag}
+        </p>
 
-        <p>{location}</p>
+        <p className={styles.tag}>{location}</p>
       </div>
 
-      <ul>
-        <li>
+      <ul className={styles.statsList}>
+        <li className={styles.listItem}>
           <span>Followers</span>
           <span>{stats.followers}</span>
         </li>
-        <li>
+        <li className={styles.listItem}>
           <span>Views</span>
           <span>{stats.views}</span>
         </li>
-        <li>
+        <li className={styles.listItem}>
           <span>Likes</span>
           <span>{stats.likes}</span>
         </li>
