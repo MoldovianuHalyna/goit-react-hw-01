@@ -15,9 +15,14 @@
   align-items: center;
   gap: 8px;
   box-shadow: 2px 2px 5px 1px gray;
+  transition: transform 300ms linear;
   p {
     margin: 0;
     font-size: 20px;
+  }
+  &:hover {
+    transform: scale(1.5);
+    cursor: pointer;
   }
 }
 .online {

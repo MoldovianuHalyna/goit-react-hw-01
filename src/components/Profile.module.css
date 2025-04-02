@@ -11,6 +11,11 @@
   box-shadow: 2px 2px 5px 1px gray;
   background-color: #e1d9d9;
   overflow: hidden;
+  transition: transform 500ms linear;
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
 }
 .imageWrapper {
   margin-top: 20px;
@@ -53,6 +58,7 @@
   gap: 12px;
   border-top: 2px solid #6a6b69;
   background-color: #535050;
+  transition: width 250ms linear;
 
   span {
     display: block;
